@@ -6,7 +6,7 @@ DCC_FLAGS=-q -b -W-IMPLICIT_IMPORT -W-GARBAGE -U"$(BPL_PATH)" -LE"$(BPL_PATH)" -
 all: build
 
 build: clean
-    @cd Packages
+	@cd Packages
 	@dof2cfg SynEdit_R7.cfg
 	@dof2cfg SynEdit_D7.cfg
 	@$(DCC) $(DCC_FLAGS) SynEdit_R7.dpk >dcc32.log
